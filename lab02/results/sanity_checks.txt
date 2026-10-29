@@ -1,0 +1,2 @@
+W=16: output shape (1257, 10), rows sum to 1: True, untrained loss 2.3032 (ln10 = 2.3026)
+W=64: output shape (1257, 10), rows sum to 1: True, untrained loss 2.3110 (ln10 = 2.3026)

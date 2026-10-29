@@ -1,0 +1,9 @@
+model,layer,hand_FLOPs
+MLP,Linear 784->256,401408
+CNN,Conv2d 16->32 3x3 @14x14,1806336
+Attention,Encoder layer: QKV projections,393216
+Attention,Encoder layer: attention scores QK^T,32768
+Attention,Encoder layer: scores x V,32768
+Attention,Encoder layer: output projection,131072
+Attention,Encoder layer: feed-forward,524288
+Attention,Encoder layer: TOTAL,1114112

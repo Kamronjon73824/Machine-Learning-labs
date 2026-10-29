@@ -1,0 +1,30 @@
+seed: 42
+dataset:
+  name: adult
+  version: 2
+  target: income
+  positive_label: ">50K"
+split:
+  test_size: 0.3
+  stratify: true
+schema:
+  int: [age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week]
+  category: [workclass, education, marital-status, occupation, relationship, race, sex, native-country, income]
+ranges:
+  age: [17, 90]
+  hours-per-week: [1, 99]
+  capital-gain: [0, 99999]
+  capital-loss: [0, 4356]
+missing_token: "?"
+cleaning:
+  numeric_impute: median
+  categorical_impute: most_frequent
+  clip_percentiles: [1, 99]
+  drop_train_duplicates: true
+features:
+  derived: [capital_net, hours_per_age]
+model:
+  type: LogisticRegression
+  max_iter: 1000
+label_audit:
+  sample_size: 50

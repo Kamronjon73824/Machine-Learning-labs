@@ -1,0 +1,87 @@
+config:
+  seed: 42
+  dataset:
+    name: adult
+    version: 2
+    target: income
+    positive_label: '>50K'
+  split:
+    test_size: 0.3
+    stratify: true
+  schema:
+    int:
+    - age
+    - fnlwgt
+    - education-num
+    - capital-gain
+    - capital-loss
+    - hours-per-week
+    category:
+    - workclass
+    - education
+    - marital-status
+    - occupation
+    - relationship
+    - race
+    - sex
+    - native-country
+    - income
+  ranges:
+    age:
+    - 17
+    - 90
+    hours-per-week:
+    - 1
+    - 99
+    capital-gain:
+    - 0
+    - 99999
+    capital-loss:
+    - 0
+    - 4356
+  missing_token: '?'
+  cleaning:
+    numeric_impute: median
+    categorical_impute: most_frequent
+    clip_percentiles:
+    - 1
+    - 99
+    drop_train_duplicates: true
+  features:
+    derived:
+    - capital_net
+    - hours_per_age
+  model:
+    type: LogisticRegression
+    max_iter: 1000
+  label_audit:
+    sample_size: 50
+processed_sha256: 9c730a08a49f02d121ad6272a65d52cac86777840c26b134cfa09b1d125b6819
+raw_rows: 48842
+raw_columns: 15
+train_rows: 34165
+test_rows: 14653
+processed_features: 107
+validation:
+  exact_duplicate_rows: 52
+  invalid_labels: 0
+label_audit:
+  duplicate_feature_groups_with_conflicting_labels: 5
+  rows_in_conflicting_groups: 10
+  sample_size: 50
+  sample_rows_with_issues: 0
+  sample_issue_counts:
+    age_out_of_range: 0
+    hours_out_of_range: 0
+    gain_and_loss_both_positive: 0
+    education_num_mismatch: 0
+    husband_female_or_wife_male: 0
+    never_married_spouse: 0
+    invalid_label: 0
+metrics:
+- features: base (14)
+  accuracy: 0.854
+  f1: 0.6601
+- features: base + derived
+  accuracy: 0.8578
+  f1: 0.6696

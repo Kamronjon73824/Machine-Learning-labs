@@ -1,0 +1,9 @@
+INFO Ingested raw data: 48842 rows, 15 columns
+INFO Validation: 52 duplicates, missing={'workclass': 2799, 'occupation': 2809, 'native-country': 857}
+INFO Train 34189 -> 34165 rows after dropping exact duplicates; test kept at 14653 rows
+INFO 
+      features  accuracy     f1
+     base (14)    0.8540 0.6601
+base + derived    0.8578 0.6696
+INFO Label audit: {'duplicate_feature_groups_with_conflicting_labels': 5, 'rows_in_conflicting_groups': 10, 'sample_size': 50, 'sample_rows_with_issues': 0, 'sample_issue_counts': {'age_out_of_range': 0, 'hours_out_of_range': 0, 'gain_and_loss_both_positive': 0, 'education_num_mismatch': 0, 'husband_female_or_wife_male': 0, 'never_married_spouse': 0, 'invalid_label': 0}}
+INFO Processed dataset SHA256: 9c730a08a49f02d121ad6272a65d52cac86777840c26b134cfa09b1d125b6819

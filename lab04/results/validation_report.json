@@ -1,0 +1,72 @@
+{
+  "rows": 48842,
+  "columns": 15,
+  "type_violations": {
+    "age": 0,
+    "fnlwgt": 0,
+    "education-num": 0,
+    "capital-gain": 0,
+    "capital-loss": 0,
+    "hours-per-week": 0,
+    "workclass": 0,
+    "education": 0,
+    "marital-status": 0,
+    "occupation": 0,
+    "relationship": 0,
+    "race": 0,
+    "sex": 0,
+    "native-country": 0,
+    "income": 0
+  },
+  "range_violations": {
+    "age": {
+      "min": 17.0,
+      "max": 90.0,
+      "below": 0,
+      "above": 0
+    },
+    "hours-per-week": {
+      "min": 1.0,
+      "max": 99.0,
+      "below": 0,
+      "above": 0
+    },
+    "capital-gain": {
+      "min": 0.0,
+      "max": 99999.0,
+      "below": 0,
+      "above": 0
+    },
+    "capital-loss": {
+      "min": 0.0,
+      "max": 4356.0,
+      "below": 0,
+      "above": 0
+    }
+  },
+  "missing_counts": {
+    "age": 0,
+    "workclass": 2799,
+    "fnlwgt": 0,
+    "education": 0,
+    "education-num": 0,
+    "marital-status": 0,
+    "occupation": 2809,
+    "relationship": 0,
+    "race": 0,
+    "sex": 0,
+    "capital-gain": 0,
+    "capital-loss": 0,
+    "hours-per-week": 0,
+    "native-country": 857,
+    "income": 0
+  },
+  "exact_duplicate_rows": 52,
+  "invalid_labels": 0,
+  "missing_columns": [],
+  "unexpected_columns": [],
+  "label_distribution": {
+    "<=50K": 37155,
+    ">50K": 11687
+  }
+}
